@@ -4,6 +4,7 @@ packages:
   - python-dev
   - docker
   - git
+  - bash
   - ctags
   - tmux
   - gcc
