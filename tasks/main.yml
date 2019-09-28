@@ -39,6 +39,14 @@
   become: true
   become_user: "{{ primary_user }}"
 
+- name: Add workspace dir
+  file:
+    path: /home/{{ primary_user }}/workspace
+    recurse: true
+    state: directory
+  become: true
+  become_user: "{{ primary_user }}"
+
 - name: Install tpm
   git:
     repo: https://github.com/tmux-plugins/tpm
