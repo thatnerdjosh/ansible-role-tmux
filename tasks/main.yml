@@ -15,6 +15,7 @@
   user:
     name: "{{ primary_user }}"
     groups: "{{ primary_groups }}"
+    shell: /bin/bash
 
 - name: Install .bashrc
   get_url:
@@ -22,7 +23,7 @@
     dest: "~/.bashrc"
   become: true
   become_user: "{{ primary_user }}"
- 
+
 - name: Install .tmux.conf
   get_url:
     url: https://raw.githubusercontent.com/nerdsvilleceo/.files/master/.tmux.conf
