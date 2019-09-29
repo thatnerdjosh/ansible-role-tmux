@@ -22,6 +22,7 @@
     name: "{{ primary_user }}"
     groups: "{{ primary_groups }}"
     shell: /bin/bash
+    append: yes 
 
 - name: Install .bashrc
   get_url:

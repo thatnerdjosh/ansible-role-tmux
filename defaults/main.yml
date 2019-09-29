@@ -16,5 +16,4 @@ build_packages:
   - ncurses-dev
 primary_user: developer
 primary_groups:
-  - developer
   - docker
