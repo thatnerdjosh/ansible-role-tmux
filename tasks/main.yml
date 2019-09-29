@@ -11,6 +11,12 @@
     state: installed
   with_items: "{{ packages }}"
 
+- name: Add groups
+  group:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ primary_groups }}"
+
 - name: Add primary user
   user:
     name: "{{ primary_user }}"
