@@ -31,6 +31,13 @@
   become: true
   become_user: "{{ primary_user }}"
 
+- name: Install .bash_profile
+  get_url:
+    url: https://raw.githubusercontent.com/nerdsvilleceo/.files/master/.bash_profile
+    dest: "~/.bash_profile"
+  become: true
+  become_user: "{{ primary_user }}"
+
 - name: Install .tmux.conf
   get_url:
     url: https://raw.githubusercontent.com/nerdsvilleceo/.files/master/.tmux.conf
