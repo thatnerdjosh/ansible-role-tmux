@@ -9,6 +9,7 @@ packages:
   - tmux
   - gcc
   - libc6-compat
+  - ssh
 build_packages:
   - make
   - gcc
