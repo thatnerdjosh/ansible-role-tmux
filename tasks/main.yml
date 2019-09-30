@@ -22,7 +22,7 @@
     name: "{{ primary_user }}"
     groups: "{{ primary_groups }}"
     shell: /bin/bash
-    append: yes 
+    append: true
 
 - name: Install .bashrc
   get_url:
@@ -66,6 +66,14 @@
     repo: https://github.com/tmux-plugins/tpm
     dest: ~/.tmux/plugins/tpm
     version: master
+  become: true
+  become_user: "{{ primary_user }}"
+
+- name: Setup tpm
+  shell: ~/.tmux/plugins/tpm/bin/install_plugins  # noqa 301
+  environment:
+    TMUX_PLUGIN_MANAGER_PATH: ~/.tmux/plugins/tpm
+  ignore_errors: true
   become: true
   become_user: "{{ primary_user }}"
 
