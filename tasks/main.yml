@@ -72,7 +72,7 @@
 - name: Setup tpm
   shell: ~/.tmux/plugins/tpm/bin/install_plugins  # noqa 301
   environment:
-    TMUX_PLUGIN_MANAGER_PATH: ~/.tmux/plugins/tpm
+    TMUX_PLUGIN_MANAGER_PATH: ~/.tmux/plugins
   ignore_errors: true
   become: true
   become_user: "{{ primary_user }}"
