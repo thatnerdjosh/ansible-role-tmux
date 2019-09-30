@@ -12,7 +12,6 @@ packages:
   - openssh
 build_packages:
   - make
-  - gcc
   - libc-dev
   - ncurses-dev
 primary_user: developer
