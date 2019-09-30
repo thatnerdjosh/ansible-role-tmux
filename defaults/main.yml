@@ -9,10 +9,10 @@ packages:
   - tmux
   - gcc
   - libc6-compat
+  - libc-dev
   - openssh
 build_packages:
   - make
-  - libc-dev
   - ncurses-dev
 primary_user: developer
 primary_groups:
