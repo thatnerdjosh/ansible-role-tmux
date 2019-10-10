@@ -11,9 +11,11 @@ packages:
   - libc6-compat
   - libc-dev
   - openssh
+  - sudo
 build_packages:
   - make
   - ncurses-dev
 primary_user: developer
 primary_groups:
   - docker
+  - wheel

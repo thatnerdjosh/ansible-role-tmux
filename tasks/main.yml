@@ -15,6 +15,14 @@
     state: present
   with_items: "{{ primary_groups }}"
 
+- name: Allow 'wheel' group to have passwordless sudo
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+
 - name: Add primary user
   user:
     name: "{{ primary_user }}"
